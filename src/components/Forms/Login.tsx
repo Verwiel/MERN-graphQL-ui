@@ -1,11 +1,11 @@
-// Image, Info, edit & delete
+// readonly, confirm and edit buttons
 import React from 'react';
 
 
 export default () => {
   return (
     <>
-      <h1>PhotoHome</h1>
+      <h1>Login</h1>
     </>
   );
 }
