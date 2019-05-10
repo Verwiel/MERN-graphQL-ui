@@ -1,0 +1,1 @@
+// inputs: title, caption, date, location, url
