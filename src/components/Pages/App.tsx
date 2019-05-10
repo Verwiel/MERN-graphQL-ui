@@ -1,12 +1,10 @@
 import React from 'react';
-import '../App.css';
+import '../../App.css';
 
-const App: React.FC = () => {
+export default () => {
   return (
     <div className="App">
       <h1>Placeholder</h1>
     </div>
   );
 }
-
-export default App;

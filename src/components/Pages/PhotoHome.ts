@@ -1,1 +1,0 @@
-// Image, Info, edit & delete

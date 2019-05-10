@@ -1,1 +1,0 @@
-// readonly, confirm and edit buttons
