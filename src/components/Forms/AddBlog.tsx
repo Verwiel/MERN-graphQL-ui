@@ -1,5 +1,5 @@
-// inputs: title, content
-import React, { useState } from 'react';
+// add pop up confirmation with publish and edit
+import React, { useState } from 'react'
 
 
 export default () => {
@@ -8,11 +8,11 @@ export default () => {
     content: ""
   })
 
-  const updateField = (event: any) => {
+  const updatePostField = (event: any) => {
     setPost({
       ...postState,
       [event.target.name]: event.target.value
-    });
+    })
   }
 
   const printValues = (event: any ) => {
@@ -28,13 +28,13 @@ export default () => {
           placeholder="Title" 
           name= "title"
           value={postState.title}
-          onChange={updateField}/>
+          onChange={updatePostField}/>
 
         <input type="text"
           placeholder="Content" 
           name= "content"
           value={postState.content}
-          onChange={updateField}/>
+          onChange={updatePostField}/>
 
         <input type="submit"
           name="submit"
@@ -42,5 +42,5 @@ export default () => {
 
       </form>
     </>
-  );
+  )
 }

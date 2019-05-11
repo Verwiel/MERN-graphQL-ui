@@ -1,13 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import './index.css'
 
-import App from './components/Pages/App';
+import App from './components/Pages/App'
 import Login from './components/Forms/Login'
 import PhotoHome from './components/Pages/PhotoHome'
-import AddBlog from './components/Forms/AddBlog'
+import FormCheck from './components/Forms/AddPhoto'
+// import FormCheck from './components/Forms/AddBlog'
+// import FormCheck from './components/Forms/Login'
 
-import * as serviceWorker from './serviceWorker';
+import * as serviceWorker from './serviceWorker'
 // Apollo
 import { ApolloProvider } from 'react-apollo'
 import { ApolloClient } from 'apollo-client'
@@ -30,7 +32,7 @@ ReactDOM.render(
     <App />
     <Login />
     <PhotoHome />
-    <AddBlog />
+    <FormCheck />
   </ApolloProvider>,
   document.getElementById('root')
 )
