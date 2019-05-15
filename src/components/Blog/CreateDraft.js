@@ -39,6 +39,7 @@ class CreateDraft extends Component {
             placeholder="Content"
             rows={8}
             value={content}
+            required
           />
 
         </div>

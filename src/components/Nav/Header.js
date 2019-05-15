@@ -9,26 +9,24 @@ class Header extends Component {
   render() {
     const authToken = localStorage.getItem(AUTH_TOKEN)
     return (
+      <>
       <div className="flex pa1 justify-between nowrap orange">
         <div className="flex flex-fixed black">
-          <div className="fw7 mr1">TopNav</div>
-          <Link to="/" className="ml1 no-underline black">
-            List
-          </Link>
-          {authToken && (
-            <div className="flex">
-              <div className="ml1">|</div>
-              <Link to="/createpost" className="ml1 no-underline black">
-                Add
-              </Link>
-              <div className="ml1">|</div>
-              <Link to="/drafts" className="ml1 no-underline black">
-                Drafts
-              </Link>
-            </div>
-          )}
-        </div>
+          <div className="fw7 mr1">
+            <Link to="/" className="ml1 no-underline black">
+             Home
+            </Link>
+          </div>
 
+          <div className="ml1">|</div>
+          <Link to="/forum" className="ml1 no-underline black">
+            Forum
+          </Link>
+          <div className="ml1">|</div>
+          <Link to="/photo" className="ml1 no-underline black">
+            Photos
+          </Link>
+        </div>
 
         {/* // Login/SignUp */}
         <div className="flex flex-fixed">
@@ -49,6 +47,8 @@ class Header extends Component {
           )}
         </div>
       </div>
+      
+      </>
     )
   }
 }
