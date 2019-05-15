@@ -1,14 +1,15 @@
 // Image, Info, edit & delete
 import React from 'react';
+import PhotoPanel from '../Nav/PhotoPanel';
 
 
 export default () => {
   return (
     <>
+      <PhotoPanel />
       <h1>PhotoHome</h1>
       <p>image, title, caption. pagination 1</p>
-      <p>same as forum, add filter to see only yours</p>
-      <p>List, add, drafts routes. hyper link to details</p>
+      <p>like detail/post but only published photos</p> 
     </>
   );
 }

@@ -11,7 +11,7 @@ class Post extends Component {
         </div>
         <div className="ml1">
           <div>
-            <a href={'/forum/drafts/'+ this.props.post.id}>
+            <a href={'/forum/'+ this.props.post.id}>
             {this.props.post.title}</a>
             ({this.props.post.content})
           </div>

@@ -2,13 +2,14 @@ import { Switch, Route } from 'react-router-dom'
 import React from 'react';
 import '../../App.css';
 import Header from '../Nav/Header'
-import CreatePost from '../Blog/CreateDraft'
-import Login from '../Blog/Login'
-import DraftList from '../Blog/DraftList'
-import DetailDraft from '../Blog/Details'
+import Login from '../Forms/Login'
+import DraftList from '../Forum/DraftList'
+import DetailDraft from '../Forum/Details'
 import BlogHome from './BlogHome'
 import DefaultHome from './DefaultHome'
 import PhotoHome from './PhotoHome'
+import AddBlog from '../Forms/AddPost';
+import AddPhoto from '../Forms/AddPhoto';
 
 export default () => {
   return (
@@ -20,11 +21,15 @@ export default () => {
           <Route exact path="/login" component={Login} />
 
           <Route exact path="/forum" component={BlogHome} />
-          <Route exact path="/forum/createpost" component={CreatePost} />    
+          <Route exact path="/forum/createpost" component={AddBlog} />
           <Route exact path="/forum/drafts" component={DraftList} />
-          <Route exact path="/forum/drafts/:id" component={DetailDraft} />
+          <Route exact path="/forum/:id" component={DetailDraft} />
 
           <Route exact path="/photo" component={PhotoHome} />
+          {/* <Route exact path="/photo/list" component={PhotoHome} /> */}
+          <Route exact path="/photo/addphoto" component={AddPhoto} />
+          {/* <Route exact path="/photo/drafts" component={PhotoHome} />
+          <Route exact path="/photo/:id" component={PhotoHome} /> */}
         </Switch>
       </div>
     </div>

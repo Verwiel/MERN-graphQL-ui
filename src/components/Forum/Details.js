@@ -116,7 +116,7 @@ class Details extends Component {
             <Mutation
               mutation={!data.singlePost.published ? PUBLISH_POST: null}
               variables={{ id: match.params.id }}
-              onCompleted={() => this.props.history.push('/forum')}
+              onCompleted={() => this.props.history.push('/forum/drafts')}
             >
               {publish => <button onClick={publish}
               >Publish</button>}
