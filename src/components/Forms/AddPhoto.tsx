@@ -39,7 +39,7 @@ export default () => {
           value={photoState.caption}
           onChange={updatePhotoField}/>
 
-        <input type="text"
+        <input type="date"
           placeholder="Date" 
           name= "date"
           value={photoState.date}

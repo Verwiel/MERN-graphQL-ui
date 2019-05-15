@@ -1,6 +1,3 @@
-// Photo Nav
-// include photoFeed, Filter, Add (link to form)
-
 import React from 'react';
 
 
@@ -12,3 +9,5 @@ export default () => {
   );
 }
 
+// Photo Nav
+// include photoFeed, Filter, Add (link to form)
