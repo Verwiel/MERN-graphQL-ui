@@ -1,17 +1,21 @@
 import React from 'react'
-import Post from './Post'
+import Photo from './Photo'
 import { Query } from 'react-apollo'
 import gql from 'graphql-tag'
 
 
-export const DRAFTS_QUERY = gql`
+export const PHOTO_DRAFTS = gql`
   {
-    postDrafts{
+    photoDrafts{
       id
-      title
-      content
       published
-      author {
+      date
+      title
+      caption
+      url
+      location
+      creator{
+        id
         name
       }
     }
@@ -20,18 +24,18 @@ export const DRAFTS_QUERY = gql`
 
 export default () => {
   return (
-    <Query query={DRAFTS_QUERY}>
+    <Query query={PHOTO_DRAFTS}>
       
       {({ loading, error, data }) => {
         if (loading) return <div>Loading...</div>
         if (error) return <div>Error</div>
     
-        const postsToRender = data.postDrafts
+        const photosToRender = data.photoDrafts
     
         return (
           <div>
-            {postsToRender.map((post, index) => (
-              <Post key={post.id} post={post} index={index}/>
+            {photosToRender.map((photo, index) => (
+              <Photo key={photo.id} photo={photo} index={index}/>
             ))}
           </div>
         )

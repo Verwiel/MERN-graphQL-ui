@@ -9,16 +9,21 @@ export default (props) => {
         </div>
         <div className="ml1">
           <div>
-            <a href={'/forum/'+ props.post.id}>
-            {props.post.title}</a>
-            ({props.post.content})
+            <a href={'/photo/'+ props.photo.id}>
+            {props.photo.title}</a>
+            ({props.photo.caption})
           </div>
-          {props.post.published && (
           <div className="f6 lh-copy gray">
-            Author: {' '}
-            {props.post.author
-              ? props.post.author.name
+            on {' '}
+            {props.photo.date
+              ? props.photo.date
               : 'Unknown'}{' '}
+          </div>
+
+          {props.photo.published && (
+          <div className="f6 lh-copy gray">
+            Posted By: 
+            {props.photo.creator.name}
           </div>
           )}
         </div>
