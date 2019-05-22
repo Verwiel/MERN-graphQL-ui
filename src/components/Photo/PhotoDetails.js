@@ -24,6 +24,7 @@ const GET_PHOTO = gql`
       location
       creator{
         id
+        name
       }
     }
   }
@@ -83,6 +84,7 @@ class PhotoDetails extends Component {
             <>
             {data.singlePhoto.published && (
             <>
+              <img src={data.singlePhoto.url} alt={data.singlePhoto.creator.name} />
               <h4>{data.singlePhoto.title}</h4>
               <p>{data.singlePhoto.caption}</p>
               <p>{data.singlePhoto.date}</p>
@@ -93,6 +95,7 @@ class PhotoDetails extends Component {
             )}
             {!data.singlePhoto.published && (
             <div>
+            <img src={data.singlePhoto.url} alt={data.singlePhoto.creator.name} />
             <form>
             <div className="flex flex-column mt3">
               <input

@@ -18,7 +18,7 @@ import PhotoDetails from '../Photo/PhotoDetails'
 
 export default () => {
   return (
-    <div className="center w85">
+    <div className="center">
       <Header />
       <div className="ph3 pv1 background-gray">
         <Switch>
