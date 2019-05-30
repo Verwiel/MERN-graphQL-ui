@@ -37,9 +37,14 @@ export default () => {
             {photosToRender.map((photo, index) => (
               <Photo key={photo.id} photo={photo} index={index}/>
             ))}
+            <div>
+            <a href='/photo/addphoto'>Add Draft</a>
+            </div>
+            <a href='/photo'>Cancel</a>
           </div>
         )
       }}       
-    </Query>    
+    </Query> 
+       
   )
 }
